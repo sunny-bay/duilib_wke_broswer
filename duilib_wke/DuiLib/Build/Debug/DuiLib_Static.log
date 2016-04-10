@@ -1,0 +1,91 @@
+﻿生成启动时间为 2016/4/7 13:42:09。
+     1>项目“F:\wke-master-static\duilib_wke\DuiLib\DuiLib_Static.vcxproj”在节点 3 上(Rebuild 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D UILIB_STATIC /D _VC80_UPGRADE=0x0600 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Build\Debug/DuiLib.pch" /Fo".\Build\Debug\\" /Fd".\Build\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D UILIB_STATIC /D _VC80_UPGRADE=0x0600 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Build\Debug/DuiLib.pch" /Fo".\Build\Debug\\" /Fd".\Build\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt UIlib.cpp Utils\WinImplBase.cpp Utils\UIDelegate.cpp Utils\Utils.cpp Core\UIBase.cpp Core\UIContainer.cpp Core\UIControl.cpp Core\UIDlgBuilder.cpp Core\UIManager.cpp Core\UIMarkup.cpp Core\UIRender.cpp Layout\UIChildLayout.cpp Layout\UIHorizontalLayout.cpp Layout\UITabLayout.cpp Layout\UITileLayout.cpp Layout\UIVerticalLayout.cpp Control\UIActiveX.cpp Control\UIButton.cpp Control\UICheckBox.cpp Control\UICombo.cpp Control\UIDateTime.cpp Control\UIEdit.cpp Control\UIGifAnim.cpp Control\UILabel.cpp Control\UIList.cpp Control\UIOption.cpp Control\UIProgress.cpp Control\UIRichEdit.cpp Control\UIScrollBar.cpp Control\UISlider.cpp Control\UIText.cpp Control\UITreeView.cpp Control\UIWebBrowser.cpp
+         UIWebBrowser.cpp
+         UITreeView.cpp
+         UIText.cpp
+         UISlider.cpp
+         UIScrollBar.cpp
+         UIRichEdit.cpp
+         UIProgress.cpp
+         UIOption.cpp
+         UIList.cpp
+         UILabel.cpp
+         UIGifAnim.cpp
+         UIEdit.cpp
+         UIDateTime.cpp
+         UICombo.cpp
+         UICheckBox.cpp
+         UIButton.cpp
+         UIActiveX.cpp
+         UIVerticalLayout.cpp
+         UITileLayout.cpp
+         UITabLayout.cpp
+         正在生成代码...
+         正在编译...
+         UIHorizontalLayout.cpp
+         UIChildLayout.cpp
+         UIRender.cpp
+         UIMarkup.cpp
+         UIManager.cpp
+         UIDlgBuilder.cpp
+         UIControl.cpp
+         UIContainer.cpp
+         UIBase.cpp
+         Utils.cpp
+         UIDelegate.cpp
+         WinImplBase.cpp
+         UIlib.cpp
+         正在生成代码...
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D UILIB_STATIC /D _VC80_UPGRADE=0x0600 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Build\Debug\\" /Fd".\Build\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt Utils\stb_image.c
+         stb_image.c
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D UILIB_STATIC /D _VC80_UPGRADE=0x0600 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Build\Debug\\" /Fd".\Build\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Utils\XUnzip.cpp
+         XUnzip.cpp
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1354,5): warning MSB8012: TargetPath(F:\wke-master-static\duilib_wke\DuiLib\.\Build\Debug\DuiLib_Static.lib) does not match the Library's OutputFile property value (F:\wke-master-static\duilib_wke\DuiLib\Build\Debug\DuiLib_Static_d.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1356,5): warning MSB8012: TargetName(DuiLib_Static) does not match the Library's OutputFile property value (DuiLib_Static_d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:".\Build\Debug\DuiLib_Static_d.lib" /NOLOGO .\Build\Debug\StdAfx.obj
+         .\Build\Debug\UIlib.obj
+         .\Build\Debug\WinImplBase.obj
+         .\Build\Debug\stb_image.obj
+         .\Build\Debug\UIDelegate.obj
+         .\Build\Debug\Utils.obj
+         .\Build\Debug\XUnzip.obj
+         .\Build\Debug\UIBase.obj
+         .\Build\Debug\UIContainer.obj
+         .\Build\Debug\UIControl.obj
+         .\Build\Debug\UIDlgBuilder.obj
+         .\Build\Debug\UIManager.obj
+         .\Build\Debug\UIMarkup.obj
+         .\Build\Debug\UIRender.obj
+         .\Build\Debug\UIChildLayout.obj
+         .\Build\Debug\UIHorizontalLayout.obj
+         .\Build\Debug\UITabLayout.obj
+         .\Build\Debug\UITileLayout.obj
+         .\Build\Debug\UIVerticalLayout.obj
+         .\Build\Debug\UIActiveX.obj
+         .\Build\Debug\UIButton.obj
+         .\Build\Debug\UICheckBox.obj
+         .\Build\Debug\UICombo.obj
+         .\Build\Debug\UIDateTime.obj
+         .\Build\Debug\UIEdit.obj
+         .\Build\Debug\UIGifAnim.obj
+         .\Build\Debug\UILabel.obj
+         .\Build\Debug\UIList.obj
+         .\Build\Debug\UIOption.obj
+         .\Build\Debug\UIProgress.obj
+         .\Build\Debug\UIRichEdit.obj
+         .\Build\Debug\UIScrollBar.obj
+         .\Build\Debug\UISlider.obj
+         .\Build\Debug\UIText.obj
+         .\Build\Debug\UITreeView.obj
+         .\Build\Debug\UIWebBrowser.obj
+         DuiLib_Static.vcxproj -> F:\wke-master-static\duilib_wke\DuiLib\.\Build\Debug\DuiLib_Static.lib
+     1>已完成生成项目“F:\wke-master-static\duilib_wke\DuiLib\DuiLib_Static.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.27

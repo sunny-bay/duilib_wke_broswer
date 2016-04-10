@@ -1,0 +1,44 @@
+<?xml	version="1.0"	encoding="utf-8"?>
+
+<Window	sizebox="5,5,5,5"	caption="0,0,0,28"	bkcolor="#FFEEFAFA">
+
+	<Font	shared="true"	id="0"	name="微软雅黑"	size="18"	default="true"/>
+	<Font	shared="true"	id="1"	name="微软雅黑"	size="18"	bold="true"/>
+	<Font	shared="true"	id="2"	name="微软雅黑"	size="16"/>
+	
+   <VerticalLayout	name="verticalLayoutRoot">
+   
+		<HorizontalLayout	name="horizontalLayoutCaption"	bkcolor="#FF428CF4"	bkcolor2="#FF083471"	height="28">
+		
+			<Control	name="ctrlLogoIcon"	pos="0,0,28,28"			bkimage="Logo.png"/>
+			<Label		name="labelTitle"	text="wkeBrowser"		font="2"			textcolor="#FFFFFFFF"/>
+			<Button		name="minbtn"		float="1.0,0.0,1.0,1.0"	pos="-96,0,-68,0"	tooltip="最小化"	normalimage="file='SystemBtn.png' source='0,0,28,28'"	hotimage="file='SystemBtn.png' source='0,28,28,56'"		pushedimage="file='SystemBtn.png' source='0,56,28,84'"/>
+			<Button		name="maxbtn"		float="1.0,0.0,1.0,1.0" pos="-68,0,-40,0"	tooltip="最大化"	normalimage="file='SystemBtn.png' source='28,0,56,28'"	hotimage="file='SystemBtn.png' source='28,28,56,56'"	pushedimage="file='SystemBtn.png' source='28,56,56,84'"	visible="true"/>
+			<Button		name="restorebtn"	float="1.0,0.0,1.0,1.0" pos="-68,0,-40,0"	tooltip="还原"		normalimage="file='SystemBtn.png' source='56,0,84,28'"	hotimage="file='SystemBtn.png' source='56,28,84,56'"	pushedimage="file='SystemBtn.png' source='56,56,84,84'"	visible="false"/>
+			<Button		name="closebtn"		float="1.0,0.0,1.0,1.0" pos="-40,0,0,0"		tooltip="关闭"		normalimage="file='SystemBtn.png' source='84,0,124,28'"	hotimage="file='SystemBtn.png' source='84,28,124,56'"	pushedimage="file='SystemBtn.png' source='84,56,124,84'"/>		
+		
+		</HorizontalLayout>
+		
+		<HorizontalLayout	name="horizontalLayoutTool"	bkcolor="#FFEEFAFA"	height="28">
+		
+			<Button	name="btnGetReferer"		float="0.0,0.5,0.0,0.5" pos="20,-12,80,12"	borderround="5,5"	text="Refer"	bkcolor="#FF428CF4"	textcolor="FF000000"	hottextcolor="0xFFFFFFFF"/>	
+			<Button	name="btnForward"	float="0.0,0.5,0.0,0.5" pos="90,-12,150,12"	borderround="5,5"	text="前进"	bkcolor="#FF428CF4"	textcolor="FF000000"	hottextcolor="0xFFFFFFFF"/>	
+			<Button	name="btnRefresh"	float="0.0,0.5,0.0,0.5" pos="160,-12,220,12"	borderround="5,5"	text="刷新"	bkcolor="#FF428CF4"	textcolor="FF000000"	hottextcolor="0xFFFFFFFF"/>	
+			<Button	name="btnsimuHit"	float="0.0,0.5,0.0,0.5" pos="230,-12,320,12"	borderround="5,5"	text="simulate"	bkcolor="#FF428CF4"	textcolor="FF000000"	hottextcolor="0xFFFFFFFF"/>	
+			<Edit	name="editUrl"	float="0.0,0.0,1.0,1.0" pos="330,0,0,0"	text="https://www.baidu.com/"/>
+		</HorizontalLayout>
+		
+		<VerticalLayout	name="verticalLayoutD3DPlant">
+		<WkeWebkit name="wkeBrowser"/>
+		</VerticalLayout>
+		
+		<HorizontalLayout	name="horizontalLayoutStatus"	bkcolor="#FF428CF4"	bkcolor2="#FF083471"	height="28">
+		
+			<Control	name="ctrlLogoIcon"	pos="0,0,28,28"			bkimage="Logo.png"/>
+			<Label		name="labelUrl"	text="wkeBrowser"		font="2"			textcolor="#FFFFFFFF"/>
+			
+		</HorizontalLayout>
+		
+	</VerticalLayout>
+	
+</Window>

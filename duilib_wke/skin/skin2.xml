@@ -1,0 +1,21 @@
+<?xml	version="1.0"	encoding="utf-8"?>
+
+<Window	sizebox="5,5,5,5"	caption="0,0,0,28"	bkcolor="#FFEEFAFA">
+
+	<Font	shared="true"	id="0"	name="微软雅黑"	size="18"	default="true"/>
+	<Font	shared="true"	id="1"	name="微软雅黑"	size="18"	bold="true"/>
+	<Font	shared="true"	id="2"	name="微软雅黑"	size="16"/>
+	
+   <VerticalLayout	name="verticalLayoutRoot">
+
+
+	
+		
+		<VerticalLayout	name="verticalLayoutD3DPlant">
+		<WkeWebkit name="wkeBrowser"/>
+		</VerticalLayout>
+		
+		
+	</VerticalLayout>
+	
+</Window>
