@@ -691,8 +691,7 @@ void FrameLoaderClient::dispatchDidReceiveTitle(const WebCore::StringWithDirecti
         wke::CWebViewHandler& handler = m_webView->m_handler;
         if (handler.titleChangedCallback)
         {
-            wke::CString string("this is a temple"/*title.string()*/);
-            handler.titleChangedCallback(m_webView, handler.titleChangedCallbackParam, &string);
+			handler.titleChangedCallback(m_webView, handler.titleChangedCallbackParam,&wke::CString(title.string()));
         }
     }
 }

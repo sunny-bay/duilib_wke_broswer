@@ -74,37 +74,39 @@ void CWkeWebkitUI::MapNativeFunction(LPCTSTR lpName, jsNativeFunction fn, UINT a
 	jsBindFunction(T2ANSI(lpName).c_str(), fn, args);
 }
 
-void CWkeWebkitUI::_onURLChanged(const struct _wkeClientHandler* clientHandler, const wkeString URL)
+void _onURLChanged(wkeWebView webView, void* param, const wkeString  URL)
 {
-	CWkeWebkitUI* pWWK = (CWkeWebkitUI*)clientHandler;
+	CWkeWebkitUI* pWWK = (CWkeWebkitUI*)param;
 #ifdef _UNICODE
 	//pWWK->m_pManager->SendNotify(pWWK, DUI_MSGTYPE_URLCHANGED, WPARAM(wkeToStringW(URL)));
-	pWWK->m_pManager->SendNotify(pWWK, DUI_MSGTYPE_URLCHANGED, WPARAM(wkeGetStringW(URL)));
+	pWWK->GetManager()->SendNotify(pWWK, DUI_MSGTYPE_URLCHANGED, WPARAM(wkeGetStringW(URL)));
 #else
 	pWWK->m_pManager->SendNotify(pWWK, DUI_MSGTYPE_URLCHANGED, WPARAM(wkeToString(URL)));
 #endif
 }
 
-void CWkeWebkitUI::_onTitleChanged(const struct _wkeClientHandler* clientHandler, const wkeString title)
+void _onTitleChanged(wkeWebView webView, void* param, const wkeString title)
 {
-	CWkeWebkitUI* pWWK = (CWkeWebkitUI*)clientHandler;
+ 	CWkeWebkitUI* pWWK = (CWkeWebkitUI*)param;
+
 #ifdef _UNICODE
-	//pWWK->m_pManager->SendNotify(pWWK, DUI_MSGTYPE_TITLECHANGED, WPARAM(wkeToStringW(title)));
-	pWWK->m_pManager->SendNotify(pWWK, DUI_MSGTYPE_TITLECHANGED, WPARAM(wkeGetStringW(title)));
+	pWWK->GetManager()->SendNotify(pWWK, DUI_MSGTYPE_TITLECHANGED, WPARAM(wkeToStringW(title)));
+	//pWWK->m_pManager->SendNotify(pWWK, DUI_MSGTYPE_TITLECHANGED, WPARAM(wkeGetStringW(title)));
 #else
-	pWWK->m_pManager->SendNotify(pWWK, DUI_MSGTYPE_TITLECHANGED, WPARAM(wkeToString(title)));
+	param->SendNotify(pWWK, DUI_MSGTYPE_TITLECHANGED, WPARAM(wkeToString(title)));
 #endif
 }
 
 CWkeWebkitUI::CWkeWebkitUI(void):
 m_pWebView(wkeCreateWebView())
 {
-	onURLChanged = _onURLChanged;
-	onTitleChanged = _onTitleChanged;
 	initConfig(m_pWebView);
 }
 void CWkeWebkitUI::initConfig(wkeWebView  _wkeWebView)
 {
+	m_pWebView->onURLChanged(_onURLChanged, this);
+	m_pWebView->onTitleChanged(_onTitleChanged, this);
+
 	m_pWebView->setUserAgent("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) MY_TEST_USER_AGENT");
 	const char *testRefer=m_pWebView->getReferer();
 	//m_pWebView->setReferer(L"it's my test referer");
@@ -144,13 +146,13 @@ void CWkeWebkitUI::DoPaint(HDC hDC, const RECT& rcPaint, CControlUI* pStopContro
 
 	m_pWebView->paint(hDC, rcPaint.left, rcPaint.top, rcPaint.right - rcPaint.left, rcPaint.bottom - rcPaint.top, 0, 0, true);
 }
-
 void CWkeWebkitUI::DoInit()
 {
 	CControlUI::DoInit();
 	m_pWebView->setName(T2ANSI(GetName()).c_str());
-	m_pWebView->setClientHandler(this);
 	m_pManager->SetTimer(this, EVENT_TICK_TIEMER_ID, 30);
+
+	
 }
 
 void CWkeWebkitUI::DoEvent( DuiLib::TEventUI& event )

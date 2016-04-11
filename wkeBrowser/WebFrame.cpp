@@ -8,7 +8,8 @@ m_pWkeWebkit(NULL)
 
 DuiLib::CDuiString CWebFrame::GetSkinFolder()
 {
-	return _T ("../../../../duilib_wke/skin");
+	return _T("");
+	//return _T ("../../../../duilib_wke/skin");
 };
 DuiLib::CDuiString CWebFrame::GetSkinFile()
 {

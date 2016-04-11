@@ -3,6 +3,8 @@
 // Used by wkeBrowser.rc
 //
 
+
+#define IDR_ZIP_SKIN             4
 #define IDS_APP_TITLE			103
 
 #define IDR_MAINFRAME			128

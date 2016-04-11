@@ -1271,13 +1271,13 @@ namespace wke
         settings->setJavaScriptCanAccessClipboard(true);
         settings->setShouldPrintBackgrounds(true);
         settings->setTextAreasAreResizable(true);
-        settings->setLocalStorageEnabled(true);
+       // settings->setLocalStorageEnabled(true);
 
         UChar dir[256];
         GetCurrentDirectory(256, dir);
-        wcscat(dir, L"\\localStorage");
-        settings->setLocalStorageDatabasePath(dir);
-        WebCore::DatabaseTracker::tracker().setDatabaseDirectoryPath(dir);
+       // wcscat(dir, L"\\localStorage");
+      //  settings->setLocalStorageDatabasePath(dir);
+       // WebCore::DatabaseTracker::tracker().setDatabaseDirectoryPath(dir);
 
         FrameLoaderClient* loader = new FrameLoaderClient(this, m_page.get());
         m_mainFrame = WebCore::Frame::create(m_page.get(), NULL, loader).get();

@@ -17,8 +17,9 @@ _tstring ANSI2T(LPCSTR);
 std::string T2ANSI(LPCTSTR);
 
 
-
-class CWkeWebkitUI : public DuiLib::CControlUI, public wkeClientHandler
+void _onTitleChanged(wkeWebView webView, void* param, const wkeString title);
+void _onURLChanged(wkeWebView webView, void* param, const wkeString  URL);
+class CWkeWebkitUI : public DuiLib::CControlUI
 {
 public:
 	CWkeWebkitUI(void);
@@ -83,8 +84,7 @@ protected:
 	
 private:
 	wkeWebView	 m_pWebView;
-	static void _onURLChanged(const struct _wkeClientHandler* clientHandler, const wkeString URL);
-	static void _onTitleChanged(const struct _wkeClientHandler* clientHandler, const wkeString title);
+	
 	void initConfig(wkeWebView );
 };
 
